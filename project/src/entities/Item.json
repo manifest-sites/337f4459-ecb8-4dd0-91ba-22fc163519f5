@@ -1,26 +1,42 @@
 {
-    "name": "Item",
+    "name": "Quest",
     "type": "object",
     "properties": {
       "userId": {
         "type": "number",
-        "description": "Unique identifier for the user who owns the to do list item"
+        "description": "Unique identifier for the player who owns the quest"
       },
       "id": {
         "type": "number",
-        "description": "Unique identifier for the to do list item"
+        "description": "Unique identifier for the quest"
       },
       "title": {
         "type": "string",
-        "description": "Name of to do list item"
+        "description": "Name of the quest"
+      },
+      "description": {
+        "type": "string",
+        "description": "Quest description or objective"
       },
       "completed": {
         "type": "boolean",
-        "description": "Whether the to do list item is complete"
+        "description": "Whether the quest is completed"
+      },
+      "difficulty": {
+        "type": "string",
+        "description": "Quest difficulty level (Easy, Medium, Hard, Epic)"
+      },
+      "xpReward": {
+        "type": "number",
+        "description": "Experience points earned upon completion"
+      },
+      "category": {
+        "type": "string",
+        "description": "Quest category (Daily, Main, Side, Achievement)"
       }
     },
     "required": [
-      "name",
-      "is_complete"
+      "title",
+      "completed"
     ]
   }
